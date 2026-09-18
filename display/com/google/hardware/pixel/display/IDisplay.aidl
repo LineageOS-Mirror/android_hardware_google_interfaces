@@ -17,6 +17,7 @@
 package com.google.hardware.pixel.display;
 import android.hardware.common.NativeHandle;
 import android.hardware.graphics.common.Rect;
+import com.google.hardware.pixel.display.DeviceOperatingConditions;
 import com.google.hardware.pixel.display.DisplayFeatureFlag;
 import com.google.hardware.pixel.display.DisplayConfigType;
 import com.google.hardware.pixel.display.DisplayStats;
@@ -472,4 +473,10 @@ interface IDisplay {
      * @param freqsKHz An array of preferred frequencies in KHz.
      */
     oneway void setPreferredDisplayFreq(DisplayConfigType configType, in int[] freqsKHz);
+
+    void setScreenContextLoggingEnabled(in boolean enabled);
+
+    boolean isLuxStreamRequested();
+
+    void setDeviceOperatingConditions(in DeviceOperatingConditions conditions);
 }

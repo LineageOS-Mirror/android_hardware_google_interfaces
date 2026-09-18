@@ -82,4 +82,7 @@ interface IDisplay {
   void registerDisplayModeRequestCallback(in com.google.hardware.pixel.display.IDisplayDisplayModeRequestCallback callback);
   oneway void setDisplaySsc(in boolean enable);
   oneway void setPreferredDisplayFreq(com.google.hardware.pixel.display.DisplayConfigType configType, in int[] freqsKHz);
+  void setScreenContextLoggingEnabled(in boolean enabled);
+  boolean isLuxStreamRequested();
+  void setDeviceOperatingConditions(in com.google.hardware.pixel.display.DeviceOperatingConditions conditions);
 }
